@@ -1,0 +1,12 @@
+.logo {
+    width: 300px;
+    padding: 5em;
+    opacity: 10;
+}
+
+.shelf {
+    padding: 5em;
+    border: 2em black solid;
+    border-radius: 4em;
+    box-shadow: 1em;
+}
