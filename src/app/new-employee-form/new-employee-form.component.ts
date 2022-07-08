@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl} from '@angular/forms';
-import { Employee } from '../models/employee.model';
 
 @Component({
   selector: 'app-new-employee-form',
@@ -9,7 +8,7 @@ import { Employee } from '../models/employee.model';
 })
 export class NewEmployeeFormComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private newEmployee: Employee) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   newEmployeeForm = this.formBuilder.group({
     fullName: new FormControl('', [Validators.required]),
