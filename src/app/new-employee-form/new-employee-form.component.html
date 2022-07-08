@@ -1,6 +1,7 @@
+<h3>New Hire Form</h3>
 <form [formGroup]="newEmployeeForm"> 
-    <p> Employee's Full Name: <input formControlName="fullName"></p>
-    <p> Employee's Company Role: <input formControlName="role"></p>
-    <p> Employee's Employment Type: <input formControlName="employmentType"></p>
-    <button (click)="createNewEmployee()"> Create New Employee </button>
+    <input formControlName="fullName" placeholder="Full Name">
+    <input formControlName="role" placeholder="Job Role">
+    <input formControlName="employmentType" placeholder="Employment Type">
+    <button (click)="createNewEmployee()" type="submit"> Create New Employee </button>
 </form>
