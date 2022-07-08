@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new-employee-form',
@@ -11,9 +11,9 @@ export class NewEmployeeFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   newEmployeeForm = this.formBuilder.group({
-    fullName: '',
-    role: '',
-    employmentType: ''
+    fullName: ['', Validators.required],
+    role: ['', Validators.required],
+    employmentType: ['', Validators.required]
   })
 
   ngOnInit(): void {
