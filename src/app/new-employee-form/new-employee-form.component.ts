@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Employee } from '../models/employee.model';
 
 @Component({
   selector: 'app-new-employee-form',
@@ -7,6 +8,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./new-employee-form.component.css']
 })
 export class NewEmployeeFormComponent implements OnInit {
+
+  @Input() newEmployee?: Employee
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -21,7 +24,7 @@ export class NewEmployeeFormComponent implements OnInit {
   }
 
   managerWarning() {
-    alert('This form can only be filled out by managers')
+    alert('This form can only be filled out by Big Boss')
     console.log('An authenticator will be added later that will check the user logged in to authenticate this process')
   }
 }
