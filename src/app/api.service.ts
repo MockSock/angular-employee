@@ -12,4 +12,8 @@ export class ApiService {
   getEmployees() {
     return this.http.get('localhost:5000/employees')
   }
+
+  createEmployee() {
+    return this.http.post('localhost:5000/employees')
+  }
 }
