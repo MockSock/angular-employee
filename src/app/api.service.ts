@@ -10,6 +10,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getEmployees() {
-    this.http.get('localhost:5000/employees')
+    return this.http.get('localhost:5000/employees')
   }
 }
