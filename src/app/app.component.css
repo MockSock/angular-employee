@@ -1,13 +1,19 @@
 .logo {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     opacity: 10;
 }
 
 .shelf {
-    background-color: slategray;
-    border: 1.2em black solid;
-    border-radius: 4em;
-    box-shadow: 1em;
+    background-color: #b0330b;
+    border: slategray 4px solid ;
+    border-radius: 35px;
     text-align: center;
+    padding: 5fr;
+}
+
+.main-section {
+    background-color: burlywood;
+    padding: 4fr;
+    margin: 15fr;
 }

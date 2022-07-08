@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  constructor(http: HttpClient) { }
+  // Always make sure this is set to private
+  constructor(private http: HttpClient) { }
 
   getEmployees() {
     this.http.get('localhost:5000/employees')
