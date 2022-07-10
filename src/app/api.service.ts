@@ -7,15 +7,16 @@ import { Employee } from './models/employee.model';
 })
 export class ApiService {
 
+  url: string = 'localhost:5000/employees'
+
   // Always make sure this is set to private
   constructor(private http: HttpClient) { }
 
   getEmployees() {
-    return this.http.get('localhost:5000/employees')
+    return this.http.get(this.url)
   }
 
   public createEmployee(employee: Employee) {
-    const url = 'localhost:5000/employees'
-    return this.http.post<any>(url, employee)
+    return this.http.post<any>(this.url, employee)
   }
 }
